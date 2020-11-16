@@ -1,0 +1,26 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Challenge Tekever",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelacordeiro/pokedex.git"
+  },
+  "keywords": [],
+  "author": "Rafaela Cordeiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelacordeiro/pokedex/issues"
+  },
+  "homepage": "https://github.com/rafaelacordeiro/pokedex#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "express": "^4.17.1",
+    "typeface-merriweather": "^1.1.13"
+  }
+}
