@@ -5,16 +5,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="author" content=".punch_line">
+    <meta name="author" content="Rafaela Cordeiro">
     <title>Pokédex</title>
     <link rel="shortcut icon" type="image/x-icon" href="./assets/img/pikachu.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
     <h1>Pokédex</h1>
-    <div id="content-page"></div>
-    <header></header>
+    <div class="pagination">
+        <button id="page-left">
+            <i class="fa fa-caret-left"></i>
+        </button>
+        <div class="page page-current">1</div>
+        <div class="page">2</div>
+        <div class="page">3</div>
+        <div class="page">4</div>
+        <div class="page">5</div>
+        <div class="page">6</div>
+        <div class="page">7</div>
+        <button id="page-right">
+            <i class="fa fa-caret-right"></i>
+        </button>
+    </div>
+    <div class="search-box-container">
+        <input type="text" class="search-box"></input>
+        <i class="fas fa-search"></i>
+    </div>
+    <div class="pokemon-list"></div>
     <script src="./assets/js/script.js"></script>
 </body>
 

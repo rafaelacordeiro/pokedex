@@ -5,6 +5,8 @@ var path = require('path');
 
 app.use('/assets', express.static('assets'));
 app.use('/views', express.static('views'));
+app.use('/node_modules', express.static('node_modules'));
+
 app.get('/', function (req, res, next) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
