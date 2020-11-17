@@ -20,5 +20,5 @@ $ npm install
 # un the application in development mode
 $ npm start
 
-# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+# The server will start at port: 3000- go to http://localhost:3000
 ```
