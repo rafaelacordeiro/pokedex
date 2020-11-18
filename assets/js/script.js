@@ -17,6 +17,11 @@ async function getPokemons(pokemonStartID, pokemonEndID) {
     // Adding the loader
     pokemonList.innerHTML = `<span class="loader"></span>`;
 
+    // Clicking Restricting (buttons)
+    buttons.forEach((el) => {
+        el.classList.add("restrict-click");
+    });
+
     // Fetching all pokemons
     const responses = [];
     for (let id = pokemonStartID; id <= pokemonEndID; id++) {
@@ -33,8 +38,12 @@ async function getPokemons(pokemonStartID, pokemonEndID) {
     promises.forEach((el, ind) => {
         const pokemonName = el.name;
         const pokemonTypes = [];
+        const pokemonAbilities = [];
         el.types.forEach((item) => {
             pokemonTypes.push(item.type.name);
+        });
+        el.abilities.forEach((item) => {
+            pokemonAbilities.push(item.ability.name);
         });
         const imageURL = el.sprites.other["official-artwork"].front_default;
         pokemonList.innerHTML += `
@@ -45,6 +54,7 @@ async function getPokemons(pokemonStartID, pokemonEndID) {
                         <div class="square"></div>
                         <h5 class="id"> #${el.id} </h5>
                         <h5 class="name"> ${pokemonName.replace(/\w/, (ch) => ch.toUpperCase())} </h5>
+                        <div class="ability">Abilities: ${pokemonAbilities.join(" / ").replace(/\b\w/g, (ch) => ch.toUpperCase())} </div>
                     </div>
                     <div class="card_back">
                         <img src=${imageURL}></img>
@@ -60,6 +70,13 @@ async function getPokemons(pokemonStartID, pokemonEndID) {
             </div>
 		`;
     });
+
+    // Enabling Clicking on Buttons
+    setTimeout(() => {
+        buttons.forEach((el) => {
+            el.classList.remove("restrict-click");
+        });
+    }, 500);
 
     search();
 }

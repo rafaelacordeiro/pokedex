@@ -85,12 +85,17 @@ img {
 	padding: 65px;
 	position: absolute;
 	background: rgba(255, 255, 255, 0.5);
-	top: 10%;
+	top: 5%;
 	z-index: -1;
 }
 .name {
 	font-weight: bold;
 	text-align: center;
+}
+.ability {
+	text-align: center;
+    font-size: 12px;
+    padding: 0 10px;
 }
 .loader {
 	border: 10px solid #de5254;
